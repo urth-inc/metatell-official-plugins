@@ -1,7 +1,6 @@
 .custom-overlay-container {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row-reverse;
   background: transparent;
   height: 100%;
   margin-bottom: 96px; // 96px is the height of the toolbar
