@@ -14,9 +14,8 @@ import { useToggle } from "../../hooks/useToggle";
 export const PasswordCollectionModal: React.FC = () => {
   const [isOpen, toggleIsOpen] = useToggle(false);
   const { foundPasswords } = useFoundPasswords();
-
   const foundPasswordsMap = new Map(
-    foundPasswords.map((password: { index: number; image_url: string }) => [
+    foundPasswords.map((password: { index: number; imgSrc: string }) => [
       password.index,
       password,
     ]),
@@ -24,18 +23,18 @@ export const PasswordCollectionModal: React.FC = () => {
 
   const displayPasswords = [
     {
-      index: 1,
-      src: foundPasswordsMap.get(1)?.image_url || questionMark,
+      index: 0,
+      src: foundPasswordsMap.get(0)?.imgSrc || questionMark,
       description: "1つ目のパスワード",
     },
     {
-      index: 2,
-      src: foundPasswordsMap.get(2)?.image_url || questionMark,
+      index: 1,
+      src: foundPasswordsMap.get(1)?.imgSrc || questionMark,
       description: "2つ目のパスワード",
     },
     {
-      index: 3,
-      src: foundPasswordsMap.get(3)?.image_url || questionMark,
+      index: 2,
+      src: foundPasswordsMap.get(2)?.imgSrc || questionMark,
       description: "3つ目のパスワード",
     },
   ];

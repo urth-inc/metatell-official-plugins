@@ -4,9 +4,7 @@ const getCurrentHubId = () => {
   const qs = new URLSearchParams(location.search);
 
   return (
-    qs.get("hub_id") ||
-    (document.location.pathname === "/" &&
-      document.location.pathname.substring(1).split("/")[0])
+    qs.get("hub_id") || document.location.pathname.substring(1).split("/")[0]
   );
 };
 
@@ -16,7 +14,7 @@ export const useFoundPasswords = () => {
   const handleChangeStorage = () => {
     const roomId = getCurrentHubId();
     if (!roomId) {
-      console.error("Room ID not found");
+      console.error("Room ID is not found");
       return;
     }
 
@@ -30,13 +28,14 @@ export const useFoundPasswords = () => {
     setFoundPasswords([...foundPasswordObjectNames]);
   };
 
-  const handleFindPassword = async ({ detail }: { detail: any }) => {
+  // @ts-expect-error - type definition is missing
+  const handleFindPassword = (detail) => {
     const index = detail.index;
     const imgSrc = detail.image_url;
     const roomId = getCurrentHubId();
 
     if (!roomId) {
-      console.error("Room ID not found");
+      console.error("Room ID is not found");
       return;
     }
 
@@ -47,6 +46,7 @@ export const useFoundPasswords = () => {
     const prevFoundPasswordObjectNames = storedData[roomId] ?? [];
 
     const prevIndex = prevFoundPasswordObjectNames.findIndex(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (v: any) => v.index === index,
     );
 
