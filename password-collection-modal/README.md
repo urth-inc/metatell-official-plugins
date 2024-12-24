@@ -23,7 +23,7 @@ Spoke has Active Trigger and Passive Trigger.
 Both triggers can be used to call the JS Call Event.
 JS Call Event Element has two parameters, `event` and `detail`.
 
-For password-collection-modal, you can use the following code.
+For password-collection-modal, you can use the following settings.
 
 - event: `find-password`
 - detail:
@@ -36,14 +36,6 @@ For password-collection-modal, you can use the following code.
 ```
 
 Index should be a number (0-2), and `image_url` should be a URL of the image.
-
-```
-{
-   "index": 0
-   "image_url": "https://example.com/image.png",
-   "modal": true
-}
-```
 
 If you want to show image modal when the user finds the password, you can use `2D View` trigger.
 
