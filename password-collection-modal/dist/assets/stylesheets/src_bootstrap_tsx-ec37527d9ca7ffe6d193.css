@@ -1,0 +1,31 @@
+/*!*****************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/components/CustomOverlay/CustomOverlay.module.scss ***!
+  \*****************************************************************************************************************************************************************************/
+.CustomOverlay-module__custom-overlay-container__sBThk {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: transparent;
+  height: 100%;
+  margin-bottom: 96px;
+  color: white;
+}
+
+.CustomOverlay-module__sample-overlay1__JcaXz {
+  pointer-events: auto;
+  background: red;
+  width: 240px;
+  height: 240px;
+}
+/*!******************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/App.module.scss ***!
+  \******************************************************************************************************************************************/
+.App-module__app-container__hnrRj {
+  margin: 32px;
+}
+
+.App-module__app-heading-container__gq_xC {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
