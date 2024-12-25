@@ -1,0 +1,1 @@
+export { PasswordCollectionModal } from "./PasswordCollectionModal";
