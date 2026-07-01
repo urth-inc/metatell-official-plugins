@@ -6,3 +6,6 @@
 
 - [password-collection-modal](./password-collection-modal/README.md)
 
+## External API Auth
+
+- [external-api-auth](./external-api-auth/README.md)

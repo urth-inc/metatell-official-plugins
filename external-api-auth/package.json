@@ -1,0 +1,10 @@
+{
+  "name": "external-api-auth",
+  "private": true,
+  "packageManager": "pnpm@9.12.3",
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm --filter @urth/external-api-auth-backend-sample test"
+  }
+}
