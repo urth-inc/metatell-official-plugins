@@ -1,0 +1,42 @@
+{
+  "name": "@urth/external-api-auth-plugin-sample",
+  "version": "0.0.0",
+  "description": "metatell CustomOverlay sample for external API authentication",
+  "metatellPlugin": {
+    "name": "External API Auth"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm run set-uuid && export $(cat .uuid.env) && webpack --mode production --config webpack.config.js && node ./scripts/add_metadata.js $VERSION_ID && node ./scripts/archive_dist.js",
+    "dev": "pnpm run set-uuid && export $(cat .uuid.env) && webpack serve --mode development --config webpack.config.js",
+    "set-uuid": "node ./scripts/set_uuid.js > .uuid.env",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@urth/metatell-sdk": "0.0.23",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.24.7",
+    "@babel/preset-env": "7.24.5",
+    "@babel/preset-react": "7.24.1",
+    "@babel/preset-typescript": "7.24.1",
+    "@module-federation/enhanced": "2.0.1",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.1",
+    "adm-zip": "0.5.15",
+    "babel-loader": "8.3.0",
+    "css-loader": "6.11.0",
+    "dotenv": "17.4.2",
+    "html-webpack-plugin": "5.6.3",
+    "mini-css-extract-plugin": "2.9.4",
+    "sass": "1.77.8",
+    "sass-loader": "16.0.5",
+    "typescript": "5.9.3",
+    "webpack": "5.94.0",
+    "webpack-cli": "6.0.1",
+    "webpack-dev-server": "5.2.2"
+  }
+}
