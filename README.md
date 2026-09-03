@@ -1,11 +1,6 @@
-# metatell-official-plugins
+# This repository has moved
 
-`metatell-official-plugins` is a collection of official plugins for the metatell platform.
+The official metatell plugin examples are now maintained in the
+[`examples/` directory of `urth-inc/metatell-plugins`](https://github.com/urth-inc/metatell-plugins/tree/develop/examples).
 
-## CustomOverlay
-
-- [password-collection-modal](./password-collection-modal/README.md)
-
-## External API Auth
-
-- [external-api-auth](./external-api-auth/README.md)
+Please use the new location for the latest examples and future updates.
